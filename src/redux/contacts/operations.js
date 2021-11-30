@@ -8,21 +8,7 @@ const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get("/contacts", {
-        method: "GET",
-        mode: "no-cors",
-        credentials: "include",
-        headers: {
-          Accept: "application/json",
-          "X-Requested-With": "XMLHttpRequest",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
-          "Access-Control-Allow-Headers":
-            "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-          "Content-Type": "application/json",
-          exmaple: "example",
-        },
-      });
+      const { data } = await axios.get("/contacts");
       return data;
     } catch (error) {
       rejectWithValue(error);
