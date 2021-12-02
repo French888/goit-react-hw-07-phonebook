@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 axios.defaults.baseURL =
   "https://61a1bf426c3b400017e69d7d.mockapi.io/contacts/";
 
