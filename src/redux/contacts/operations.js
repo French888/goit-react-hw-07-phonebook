@@ -9,7 +9,8 @@ axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 //     "Access-Control-Allow-Origin": "*",
 //   },
 // };
-axios.defaults.baseURL = "https://61a9f08cbfb110001773efb8.mockapi.io/contacts";
+axios.defaults.baseURL = "https://619aad8627827600174452eb.mockapi.io";
+// "https://61a9f08cbfb110001773efb8.mockapi.io/contacts";
 
 const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
