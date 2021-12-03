@@ -1,22 +1,21 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
-let axiosConfig = {
-  headers: {
-    method: "POST",
-    "X-Requested-With": "XMLHttpRequest",
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Access-Control-Allow-Origin": "*",
-  },
-};
-axios.defaults.baseURL =
-  "https://61a1bf426c3b400017e69d7d.mockapi.io/contacts/";
+// axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+// let axiosConfig = {
+//   headers: {
+//     method: "POST",
+//     "X-Requested-With": "XMLHttpRequest",
+//     "Content-Type": "application/x-www-form-urlencoded",
+//     "Access-Control-Allow-Origin": "*",
+//   },
+// };
+axios.defaults.baseURL = "https://61a9f08cbfb110001773efb8.mockapi.io/contacts";
 
 const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get("/contacts", axiosConfig);
+      const { data } = await axios.get("/contacts");
       return data;
     } catch (error) {
       rejectWithValue(error);
