@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-// axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 // let axiosConfig = {
 //   headers: {
 //     method: "POST",
